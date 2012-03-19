@@ -42,5 +42,7 @@
   name = name.compact
   
   name.each do |url|
-  `wget -c #{url.url}`
+    url = url.url.gsub("?referrer=rss","")
+    #puts url
+    `wget -c #{url}`
   end
