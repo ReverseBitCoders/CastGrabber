@@ -12,8 +12,8 @@ passing the '-c' parameter to 'wget'.
 (Sorry for such crappy condition of the code, i'm new to ruby :) )
 
 ##Scripts currently available
-* fifVimCasts.rb  Download from vimcasts.org
-* fifRailsCast.rb Download from railscasts.com
+* fifVimCasts.rb  Fetch It From vimcasts.org
+* fifRailsCast.rb Fetch It From railscasts.com
 
 ## How to use it ##
 
