@@ -20,29 +20,29 @@
 #  
 
 
-  
-  require 'rss/1.0'
-  require 'rss/2.0'
-  require 'open-uri'
-  
-  
-  source = "http://vimcasts.org/feeds/ogg"
-  
-  content = ""
-  
-  open(source) do |s| 
+
+require 'rss/1.0'
+require 'rss/2.0'
+require 'open-uri'
+
+
+source = "http://vimcasts.org/feeds/ogg"
+
+content = ""
+
+open(source) do |s| 
   content = s.read
-  end
-  
-  rss = RSS::Parser.parse(content, false)
-  
-  name=[]
-  0.upto(rss.items.count-1) { |f| name.push(rss.items[f].enclosure) }
-  
-  name = name.compact
-  
-  name.each do |url|
-    url = url.url.gsub("?referrer=rss","")
-    #puts url
-    `wget -c #{url}`
-  end
+end
+
+rss = RSS::Parser.parse(content, false)
+
+name=[]
+0.upto(rss.items.count-1) { |f| name.push(rss.items[f].enclosure) }
+
+name = name.compact
+
+name.each do |url|
+  url = url.url.gsub("?referrer=rss","")
+  #puts url
+  `wget -c #{url}`
+end
