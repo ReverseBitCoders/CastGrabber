@@ -41,8 +41,8 @@ name=[]
 
 name = name.compact
 
-name.each do |url|
-  url = url.url.gsub("?referrer=rss","")
-  #puts url
-  `wget -c #{url}`
+name.each do |item|
+  item = item.url.gsub("?referrer=rss","")
+  #puts item
+  `wget -c #{item}`
 end
