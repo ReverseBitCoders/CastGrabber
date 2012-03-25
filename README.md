@@ -14,6 +14,7 @@ passing the '-c' parameter to 'wget'.
 ##Scripts currently available
 * fifVimCasts.rb  Fetch It From vimcasts.org
 * fifRailsCast.rb Fetch It From railscasts.com
+* fifDjangoDjourney.rb Fetch It From pressedweb.com/category/django-djourney/
 
 ## How to use it ##
 
